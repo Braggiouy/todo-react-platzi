@@ -1,7 +1,7 @@
 import React from "react";
 
 function TodoSearch() {
-  return <input placeholder="Cebolla" />;
+  return <input placeholder="Onions" />;
 }
 
 export { TodoSearch };
