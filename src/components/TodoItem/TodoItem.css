@@ -1,0 +1,14 @@
+.item-box {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-text {
+  padding: 0px 10px;
+}
+
+.item-icon {
+  cursor: pointer;
+}
