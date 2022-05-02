@@ -10,7 +10,7 @@ import "./App.css";
 const todos = [
   { text: "Cortar cebolla", completed: false },
   { text: "Tormar el curso de intro a react", completed: false },
-  { text: "Llorar con la llorona", completed: false },
+  { text: "Llorar con la llorona", completed: true },
 ];
 function App() {
   return (
@@ -19,7 +19,11 @@ function App() {
       <TodoSearch />
       <TodoList>
         {todos.map((todo) => (
-          <TodoItem key={todo.text} value={todo.text} />
+          <TodoItem
+            key={todo.text}
+            value={todo.text}
+            completed={todo.completed}
+          />
         ))}
       </TodoList>
       <CreateTodoButton />

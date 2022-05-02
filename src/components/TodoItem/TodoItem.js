@@ -3,12 +3,26 @@ import React from "react";
 import "./TodoItem.css";
 
 function TodoItem(props) {
-  console.log(props);
+  const onComplete = () => {
+    alert(" Todo completed. " + props.value);
+  };
+  const onDelete = () => {
+    alert(" Todo deleted. " + props.value);
+  };
   return (
-    <li className="item-box">
-      <span className="item-icon">✅</span>
-      <p className="item-text">{props.value}</p>
-      <span className="item-icon">x</span>
+    <li className="item-todo">
+      <span
+        className={`icon icon-check ${props.completed && "icon-check--active"}`}
+        onClick={onComplete}
+      >
+        √
+      </span>
+      <p className={`item-text ${props.completed && "item-text--complete"}`}>
+        {props.value}
+      </p>
+      <span className="icon icon-delete" onClick={onDelete}>
+        X
+      </span>
     </li>
   );
 }
