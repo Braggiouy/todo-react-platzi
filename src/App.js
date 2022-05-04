@@ -29,7 +29,6 @@ function App() {
     filteredTodo = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
       const searchValueText = searchValue.toLowerCase();
-      console.log(todoText.includes(searchValueText));
       return todoText.includes(searchValueText);
     });
   }
