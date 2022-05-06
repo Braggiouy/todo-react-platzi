@@ -33,7 +33,7 @@ function App() {
     });
   }
 
-  const toogleTodo   = (text) => {
+  const toogleTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
@@ -47,9 +47,15 @@ function App() {
     setTodos(newTodos);
   };
 
-  // const addTodo = () => {
-
-  // };
+  const addTodo = (message) => {
+    const newTodos = [...todos];
+    const createdTodo = {
+      text: message,
+      completed: false,
+    };
+    newTodos.push(createdTodo);
+    setTodos(newTodos);
+  };
 
   // For todoItem
   return (
@@ -62,12 +68,12 @@ function App() {
             key={todo.text}
             value={todo.text}
             completed={todo.completed}
-            onComplete={() => toogleTodo  (todo.text)}
+            onComplete={() => toogleTodo(todo.text)}
             onDelete={() => deleteTodos(todo.text)}
           />
         ))}
       </TodoList>
-      <CreateTodoButton />
+      <CreateTodoButton addTodo={() => addTodo(searchValue)} />
     </div>
   );
 }
