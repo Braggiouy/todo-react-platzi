@@ -8,9 +8,9 @@ import { CreateTodoButton } from "./components/TodoButton/CreateTodoButton.js";
 import "./App.css";
 
 const defaultTodo = [
-  { text: "Cortar cebolla", completed: false },
-  { text: "Tormar el curso de intro a react", completed: false },
-  { text: "Llorar con la llorona", completed: true },
+  { text: "Task 1", completed: false },
+  { text: "Task 2", completed: false },
+  { text: "Task 3", completed: true },
 ];
 function App() {
   const [todos, setTodos] = React.useState(defaultTodo);
@@ -33,6 +33,25 @@ function App() {
     });
   }
 
+  const toggleComplete   = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+
+  const deleteTodos = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
+
+  // const addTodo = () => {
+
+  // };
+
+  // For todoItem
   return (
     <div className="todo-box">
       <TodoCounter total={totalTodos} completed={completedTodos} />
@@ -43,6 +62,8 @@ function App() {
             key={todo.text}
             value={todo.text}
             completed={todo.completed}
+            onComplete={() => toggleComplete  (todo.text)}
+            onDelete={() => deleteTodos(todo.text)}
           />
         ))}
       </TodoList>
