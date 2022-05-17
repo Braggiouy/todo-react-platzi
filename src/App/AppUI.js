@@ -16,11 +16,18 @@ function AppUI({
   toogleTodo,
   deleteTodos,
   addTodo,
+  loading,
+  error,
 }) {
   return (
     <div className="todo-box">
       <TodoCounter total={totalTodos} completed={completedTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      {error && <p>Drive nuts, there was an error</p>}
+      {loading && <p>We are loading your data</p>}
+      {!loading && !filteredTodo.length && (
+        <p>All good, start creating your todo item</p>
+      )}
       <TodoList>
         {filteredTodo.map((todo) => (
           <TodoItem
