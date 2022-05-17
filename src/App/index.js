@@ -1,9 +1,9 @@
 import React from "react";
-import { TodoCounter } from "./components/TodoCounter/TodoCounter";
-import { TodoSearch } from "./components/TodoSearch/TodoSearch.js";
-import { TodoList } from "./components/TodoList/TodoList.js";
-import { TodoItem } from "./components/TodoItem/TodoItem.js";
-import { CreateTodoButton } from "./components/TodoButton/CreateTodoButton.js";
+import { TodoCounter } from "../components/TodoCounter";
+import { TodoSearch } from "../components/TodoSearch";
+import { TodoList } from "../components/TodoList";
+import { TodoItem } from "../components/TodoItem";
+import { CreateTodoButton } from "../components/TodoButton";
 
 import "./App.css";
 
