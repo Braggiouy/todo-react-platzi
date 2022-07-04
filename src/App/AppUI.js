@@ -29,7 +29,7 @@ function AppUI() {
         {error && <p>Drive nuts, there was an error</p>}
         {loading && <p>We are loading your data</p>}
         {!loading && !filteredTodo.length && (
-          <p>All good, start creating your todo item</p>
+          <p>All good, start creating your todo item around here</p>
         )}
         {filteredTodo.map((todo) => (
           <TodoItem
