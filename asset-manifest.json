@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo-react-platzi/static/css/main.ec9b4448.css",
+    "main.js": "/todo-react-platzi/static/js/main.ebcfd610.js",
+    "index.html": "/todo-react-platzi/index.html",
+    "main.ec9b4448.css.map": "/todo-react-platzi/static/css/main.ec9b4448.css.map",
+    "main.ebcfd610.js.map": "/todo-react-platzi/static/js/main.ebcfd610.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec9b4448.css",
+    "static/js/main.ebcfd610.js"
+  ]
+}
