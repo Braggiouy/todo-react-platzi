@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoSearch.css";
 
-function TodoSearch({ searchValue, setSearchValue, addTodo }) {
+function TodoSearch({ searchValue, setSearchValue }) {
   const onSearchValueChange = (e) => {
     setSearchValue(e.target.value);
   };
@@ -12,7 +12,6 @@ function TodoSearch({ searchValue, setSearchValue, addTodo }) {
       onChange={onSearchValueChange}
       placeholder="Add your item here, please"
       value={searchValue}
-      onKeyDown={addTodo}
     />
   );
 }

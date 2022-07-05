@@ -18,11 +18,13 @@ function AppUI() {
     addTodo,
     searchValue,
     setSearchValue,
+    totalTodos,
+    completedTodos,
   } = React.useContext(TodoContext);
 
   return (
     <div className="todo-box">
-      <TodoCounter />
+      <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
